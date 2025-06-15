@@ -18,8 +18,10 @@ in
       curl
       fd
       fzf
+      hyperfine
       nil
       nixfmt-rfc-style
+      python313
       ripgrep
       rsync
       ruff
