@@ -6,6 +6,11 @@ let
     inputs.nix-index-database.nixosModules.nix-index
     ../modules
   ];
+  overlayModule = {
+    nixpkgs.overlays = [
+      inputs.fenix.overlays.default
+    ];
+  };
   specialArgs = { inherit inputs; };
 in
 {
@@ -13,6 +18,9 @@ in
     hostModule:
     super.nixosSystem {
       inherit specialArgs;
-      modules = [ hostModule ] ++ modules;
+      modules = [
+        hostModule
+        overlayModule
+      ] ++ modules;
     };
 }
