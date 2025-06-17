@@ -14,6 +14,5 @@ lib.mkIf ((dev.type == "desktop") || (dev.type == "laptop")) {
     noto-fonts
     noto-fonts-cjk-sans
     nerd-fonts.jetbrains-mono
-    nerd-fonts.symbols-only
   ];
 }
