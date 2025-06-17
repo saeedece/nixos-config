@@ -111,7 +111,19 @@
           ];
 
           language-server.ruff = {
-            command = "ruff";
+            command = "ruff-lsp";
+            args = [ "server" ];
+          };
+
+          language-server.ruff.config.settings = {
+            args = [
+              "--ignore"
+              "E501"
+            ];
+          };
+
+          language-server.ty = {
+            command = "ty";
             args = [ "server" ];
           };
         };

@@ -13,7 +13,6 @@ in
     with pkgs;
     [
       age
-      basedpyright
       clang
       curl
       fd
@@ -24,13 +23,9 @@ in
       python313
       ripgrep
       rsync
-      ruff
       sops
-      tinymist
       tokei
       tree
-      typst
-      typstyle
       uv
     ]
     ++ (lib.optional (dev.hasSound) pavucontrol)
@@ -38,8 +33,8 @@ in
       discord
       drawio
       foliate
-      keepassxc
       kdePackages.kolourpaint
+      keepassxc
       mgba
       obsidian
     ]);
