@@ -13,6 +13,7 @@ in
     with pkgs;
     [
       age
+      codex
       clang
       curl
       fd
