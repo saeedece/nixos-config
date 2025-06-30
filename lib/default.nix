@@ -7,9 +7,7 @@ let
     ../modules
   ];
   overlayModule = {
-    nixpkgs.overlays = [
-      inputs.fenix.overlays.default
-    ];
+    nixpkgs.overlays = [ ];
   };
   specialArgs = { inherit inputs; };
 in

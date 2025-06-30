@@ -12,8 +12,6 @@
     ./nix.nix
     ./nixpkgs.nix
     ./nushell
-    ./ocaml
     ./packages.nix
-    ./rust.nix
   ];
 }

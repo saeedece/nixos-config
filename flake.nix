@@ -15,10 +15,6 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -28,7 +24,6 @@
       home-manager,
       lix-module,
       nix-index-database,
-      fenix,
     }:
     let
       lib = nixpkgs.lib.extend (import ./lib inputs);

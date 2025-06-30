@@ -221,14 +221,3 @@ $env.config.hooks = {
   pre_prompt: []
 }
 
-def opam_env_nu [] {
-  opam env
-  | str trim
-  | split row -r "[;\n]+"
-  | drop 1
-  | every 2
-  | each {|s| parse --regex "^(?P<VARIABLE>[^=]+)='(?P<VALUE>[^']*)'$"}
-  | each {|s| {$s.VARIABLE.0: ($s.VALUE.0 | split row ":")}}
-  | reduce {|it| merge $it}
-}
-
