@@ -13,13 +13,13 @@ lib.mkIf ((dev.type == "desktop") || (dev.type == "laptop")) {
       programs.ghostty = {
         enable = true;
         settings = {
+          theme = "modus_vivendi";
           command = lib.getExe pkgs.nushell;
           font-size = 11;
           font-feature = "-calt";
           shell-integration-features = "no-cursor";
-          theme = "modus_operandi";
           window-theme = "ghostty";
-          window-decoration = "client";
+          window-decoration = "auto";
         };
         themes = {
           "modus_operandi" = {
@@ -46,6 +46,32 @@ lib.mkIf ((dev.type == "desktop") || (dev.type == "laptop")) {
             ];
             selection-background = "#bcbcbc";
             selection-foreground = "#000000";
+          };
+          "modus_vivendi" = {
+            background = "#000000";
+            foreground = "#ffffff";
+            selection-background = "#5a5a5a";
+            selection-foreground = "#ffffff";
+            cursor-color = "#ffffff";
+
+            palette = [
+              "0=#1e1e1e"
+              "1=#ff5f59"
+              "2=#44bc44"
+              "3=#d0bc00"
+              "4=#2fafff"
+              "5=#feacd0"
+              "6=#00d3d0"
+              "7=#ffffff"
+              "8=#535353"
+              "9=#ff7f9f"
+              "10=#00c06f"
+              "11=#dfaf7a"
+              "12=#00bcff"
+              "13=#b6a0ff"
+              "14=#6ae4b9"
+              "15=#989898"
+            ];
           };
         };
       };

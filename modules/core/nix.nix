@@ -25,11 +25,4 @@
     "nix-command"
     "flakes"
   ];
-
-  programs.nix-ld.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    nh
-    nix-output-monitor
-  ];
 }

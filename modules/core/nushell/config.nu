@@ -23,99 +23,99 @@ $env.config = {
 }
 
 $env.config.color_config = {
-  binary: '#a36ac7'
-  block: '#3971ed'
-  cell-path: '#373b41'
-  closure: '#3971ed'
-  custom: '#1d1f21'
-  duration: '#fba922'
-  float: '#cc342b'
-  glob: '#1d1f21'
-  int: '#a36ac7'
-  list: '#3971ed'
-  nothing: '#cc342b'
-  range: '#fba922'
-  record: '#3971ed'
-  string: '#198844'
+  binary: '#bc8cff'
+  block: '#58a6ff'
+  cell-path: '#b1bac4'
+  closure: '#39c5cf'
+  custom: '#f0f6fc'
+  duration: '#d29922'
+  float: '#ffa198'
+  glob: '#f0f6fc'
+  int: '#bc8cff'
+  list: '#39c5cf'
+  nothing: '#ff7b72'
+  range: '#d29922'
+  record: '#39c5cf'
+  string: '#3fb950'
 
-  bool: {|| if $in { '#3971ed' } else { '#fba922' } }
+  bool: {|| if $in { '#56d4dd' } else { '#d29922' } }
 
   datetime: {|| (date now) - $in |
       if $in < 1hr {
-          { fg: '#cc342b' attr: 'b' }
+          { fg: '#ff7b72' attr: 'b' }
       } else if $in < 6hr {
-          '#cc342b'
+          '#ff7b72'
       } else if $in < 1day {
-          '#fba922'
+          '#d29922'
       } else if $in < 3day {
-          '#198844'
+          '#3fb950'
       } else if $in < 1wk {
-          { fg: '#198844' attr: 'b' }
+          { fg: '#3fb950' attr: 'b' }
       } else if $in < 6wk {
-          '#3971ed'
+          '#39c5cf'
       } else if $in < 52wk {
-          '#3971ed'
+          '#58a6ff'
       } else { 'dark_gray' }
   }
 
   filesize: {|e|
       if $e == 0b {
-          '#373b41'
+          '#b1bac4'
       } else if $e < 1mb {
-          '#3971ed'
-      } else {{ fg: '#3971ed' }}
+          '#39c5cf'
+      } else {{ fg: '#58a6ff' }}
   }
 
-  shape_and: { fg: '#a36ac7' attr: 'b' }
-  shape_binary: { fg: '#a36ac7' attr: 'b' }
-  shape_block: { fg: '#3971ed' attr: 'b' }
-  shape_bool: '#3971ed'
-  shape_closure: { fg: '#3971ed' attr: 'b' }
-  shape_custom: '#198844'
-  shape_datetime: { fg: '#3971ed' attr: 'b' }
-  shape_directory: '#3971ed'
-  shape_external: '#3971ed'
-  shape_external_resolved: '#3971ed'
-  shape_externalarg: { fg: '#198844' attr: 'b' }
-  shape_filepath: '#3971ed'
-  shape_flag: { fg: '#3971ed' attr: 'b' }
-  shape_float: { fg: '#cc342b' attr: 'b' }
+  shape_and: { fg: '#bc8cff' attr: 'b' }
+  shape_binary: { fg: '#bc8cff' attr: 'b' }
+  shape_block: { fg: '#58a6ff' attr: 'b' }
+  shape_bool: '#56d4dd'
+  shape_closure: { fg: '#39c5cf' attr: 'b' }
+  shape_custom: '#3fb950'
+  shape_datetime: { fg: '#39c5cf' attr: 'b' }
+  shape_directory: '#39c5cf'
+  shape_external: '#39c5cf'
+  shape_external_resolved: '#56d4dd'
+  shape_externalarg: { fg: '#3fb950' attr: 'b' }
+  shape_filepath: '#39c5cf'
+  shape_flag: { fg: '#58a6ff' attr: 'b' }
+  shape_float: { fg: '#ffa198' attr: 'b' }
   shape_garbage: { fg: '#FFFFFF' bg: '#FF0000' attr: 'b' }
-  shape_glob_interpolation: { fg: '#3971ed' attr: 'b' }
-  shape_globpattern: { fg: '#3971ed' attr: 'b' }
-  shape_int: { fg: '#a36ac7' attr: 'b' }
-  shape_internalcall: { fg: '#3971ed' attr: 'b' }
-  shape_keyword: { fg: '#a36ac7' attr: 'b' }
-  shape_list: { fg: '#3971ed' attr: 'b' }
-  shape_literal: '#3971ed'
-  shape_match_pattern: '#198844'
+  shape_glob_interpolation: { fg: '#39c5cf' attr: 'b' }
+  shape_globpattern: { fg: '#39c5cf' attr: 'b' }
+  shape_int: { fg: '#bc8cff' attr: 'b' }
+  shape_internalcall: { fg: '#39c5cf' attr: 'b' }
+  shape_keyword: { fg: '#bc8cff' attr: 'b' }
+  shape_list: { fg: '#39c5cf' attr: 'b' }
+  shape_literal: '#58a6ff'
+  shape_match_pattern: '#3fb950'
   shape_matching_brackets: { attr: 'u' }
-  shape_nothing: '#cc342b'
-  shape_operator: '#fba922'
-  shape_or: { fg: '#a36ac7' attr: 'b' }
-  shape_pipe: { fg: '#a36ac7' attr: 'b' }
-  shape_range: { fg: '#fba922' attr: 'b' }
-  shape_raw_string: { fg: '#1d1f21' attr: 'b' }
-  shape_record: { fg: '#3971ed' attr: 'b' }
-  shape_redirection: { fg: '#a36ac7' attr: 'b' }
-  shape_signature: { fg: '#198844' attr: 'b' }
-  shape_string: '#198844'
-  shape_string_interpolation: { fg: '#3971ed' attr: 'b' }
-  shape_table: { fg: '#3971ed' attr: 'b' }
-  shape_vardecl: { fg: '#3971ed' attr: 'u' }
-  shape_variable: '#a36ac7'
+  shape_nothing: '#ff7b72'
+  shape_operator: '#d29922'
+  shape_or: { fg: '#bc8cff' attr: 'b' }
+  shape_pipe: { fg: '#bc8cff' attr: 'b' }
+  shape_range: { fg: '#d29922' attr: 'b' }
+  shape_raw_string: { fg: '#f0f6fc' attr: 'b' }
+  shape_record: { fg: '#39c5cf' attr: 'b' }
+  shape_redirection: { fg: '#bc8cff' attr: 'b' }
+  shape_signature: { fg: '#3fb950' attr: 'b' }
+  shape_string: '#3fb950'
+  shape_string_interpolation: { fg: '#39c5cf' attr: 'b' }
+  shape_table: { fg: '#58a6ff' attr: 'b' }
+  shape_vardecl: { fg: '#58a6ff' attr: 'u' }
+  shape_variable: '#bc8cff'
 
-  foreground: '#373b41'
-  background: '#ffffff'
-  cursor: '#373b41'
+  foreground: '#b3b1ad'
+  background: '#0d1117'
+  cursor: '#73b7f2'
 
-  empty: '#3971ed'
-  header: { fg: '#198844' attr: 'b' }
-  hints: '#b4b7b4'
+  empty: '#58a6ff'
+  header: { fg: '#3fb950' attr: 'b' }
+  hints: '#6e7681'
   leading_trailing_space_bg: { attr: 'n' }
-  row_index: { fg: '#198844' attr: 'b' }
-  search_result: { fg: '#cc342b' bg: '#373b41' }
-  separator: '#373b41'
+  row_index: { fg: '#3fb950' attr: 'b' }
+  search_result: { fg: '#ff7b72' bg: '#b1bac4' }
+  separator: '#b1bac4'
 }
 
 $env.config.ls = {

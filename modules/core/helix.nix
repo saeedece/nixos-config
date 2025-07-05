@@ -11,7 +11,7 @@
       programs.helix = {
         enable = true;
         settings = {
-          theme = "modus_operandi";
+          theme = "modus_vivendi";
           editor = {
             auto-completion = false;
             color-modes = true;

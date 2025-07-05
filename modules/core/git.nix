@@ -18,7 +18,7 @@
           commit.gpgSign = true;
 
           gpg.format = "ssh";
-          user.signingKey = "~/.ssh/id_ed25519";
+          user.signingKey = "~/.ssh/id_ed25519.pub";
         };
       };
 
