@@ -17,6 +17,10 @@
           ${lib.getExe pkgs.zoxide} init nushell --cmd cd > $out
         '';
 
+        "nushell/ls_colors.txt".source = pkgs.runCommand "ls_colors.txt" { } ''
+          ${lib.getExe pkgs.vivid} generate modus-operandi > $out
+        '';
+
         "nushell/starship.nu".source = pkgs.runCommand "starship.nu" { } ''
           ${lib.getExe pkgs.starship} init nu > $out
         '';

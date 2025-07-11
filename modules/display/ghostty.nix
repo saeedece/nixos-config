@@ -13,13 +13,13 @@ lib.mkIf ((dev.type == "desktop") || (dev.type == "laptop")) {
       programs.ghostty = {
         enable = true;
         settings = {
-          theme = "modus_vivendi";
+          theme = "modus_operandi";
           command = lib.getExe pkgs.nushell;
           font-size = 11;
           font-feature = "-calt";
           shell-integration-features = "no-cursor";
           window-theme = "ghostty";
-          window-decoration = "auto";
+          window-decoration = "client";
         };
         themes = {
           "modus_operandi" = {
