@@ -1,6 +1,7 @@
 { config, lib, ... }:
 {
   imports = [
+    ./bash.nix
     ./bat.nix
     ./btop.nix
     ./direnv.nix
@@ -11,7 +12,6 @@
     ./networking.nix
     ./nix.nix
     ./nixpkgs.nix
-    ./nushell
     ./packages.nix
   ];
 }

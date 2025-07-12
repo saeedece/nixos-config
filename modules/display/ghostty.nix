@@ -14,7 +14,6 @@ lib.mkIf ((dev.type == "desktop") || (dev.type == "laptop")) {
         enable = true;
         settings = {
           theme = "modus_operandi";
-          command = lib.getExe pkgs.nushell;
           font-size = 11;
           font-feature = "-calt";
           shell-integration-features = "no-cursor";

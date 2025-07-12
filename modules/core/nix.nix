@@ -25,4 +25,8 @@
     "nix-command"
     "flakes"
   ];
+  environment.systemPackages = with pkgs; [
+    nh
+    nix-output-monitor
+  ];
 }
