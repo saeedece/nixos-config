@@ -20,5 +20,5 @@ in
     "LC_PAPER"
     "LC_TELEPHONE"
     "LC_TIME"
-  ] (const "en_US.UTF-8");
+  ] (const "C.UTF-8");
 }

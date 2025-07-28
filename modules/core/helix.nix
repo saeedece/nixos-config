@@ -40,44 +40,6 @@
         languages = {
           language = [
             {
-              name = "rust";
-              formatter = {
-                command = "rustfmt";
-              };
-              auto-format = true;
-            }
-
-            {
-              name = "c";
-              file-types = [
-                "c"
-                "h"
-              ];
-              formatter = {
-                command = "clang-format";
-              };
-              auto-format = true;
-            }
-
-            {
-              name = "cpp";
-              file-types = [
-                "cpp"
-                "cc"
-                "cxx"
-                "hpp"
-                "hcc"
-                "hxx"
-                "cu"
-                "cuh"
-              ];
-              formatter = {
-                command = "clang-format";
-              };
-              auto-format = true;
-            }
-
-            {
               name = "nix";
               formatter.command = "nixfmt";
               auto-format = true;
@@ -87,7 +49,7 @@
               name = "python";
               language-servers = [
                 "basedpyright"
-                "ruff"
+                "ty"
               ];
               formatter = {
                 command = "ruff";
@@ -109,18 +71,6 @@
               auto-format = true;
             }
           ];
-
-          language-server.ruff = {
-            command = "ruff-lsp";
-            args = [ "server" ];
-          };
-
-          language-server.ruff.config.settings = {
-            args = [
-              "--ignore"
-              "E501"
-            ];
-          };
 
           language-server.ty = {
             command = "ty";

@@ -13,18 +13,15 @@ in
     with pkgs;
     [
       age
-      codex
-      clang
+      claude-code
       curl
       fd
       fzf
       hyperfine
       nil
       nixfmt-rfc-style
-      python313
       ripgrep
       rsync
-      sops
       tokei
       tree
       uv
@@ -37,6 +34,5 @@ in
       kdePackages.kolourpaint
       keepassxc
       mgba
-      obsidian
     ]);
 }
