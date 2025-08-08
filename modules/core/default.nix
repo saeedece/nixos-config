@@ -4,6 +4,7 @@
     ./bash.nix
     ./bat.nix
     ./btop.nix
+    ./codex.nix
     ./git.nix
     ./home.nix
     ./locale.nix

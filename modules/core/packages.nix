@@ -13,7 +13,6 @@ in
     with pkgs;
     [
       age
-      claude-code
       curl
       fd
       fzf
