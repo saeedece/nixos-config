@@ -19,6 +19,7 @@ in
       hyperfine
       nil
       nixfmt-rfc-style
+      python3
       ripgrep
       rsync
       tokei
