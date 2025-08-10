@@ -5,6 +5,7 @@
     ./bat.nix
     ./btop.nix
     ./codex.nix
+    ./docker.nix
     ./git.nix
     ./home.nix
     ./locale.nix
