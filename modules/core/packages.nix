@@ -34,5 +34,6 @@ in
       kdePackages.kolourpaint
       keepassxc
       mgba
+      remmina
     ]);
 }
